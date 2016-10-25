@@ -46,3 +46,14 @@ group :development do
 end
 
 gem 'curation_concerns'
+group :development, :test do
+  gem 'solr_wrapper', '>= 0.3'
+end
+
+gem 'rsolr', '~> 1.0'
+gem 'devise'
+gem 'devise-guests', '~> 0.5'
+group :development, :test do
+  gem 'fcrepo_wrapper'
+  gem 'rspec-rails'
+end

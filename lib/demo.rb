@@ -27,6 +27,14 @@ class Demo
   end
 
   def self.run!
-    PreservationEventLogger.log_preservation_event(file_set: new_file_set, premis_event_type: 'fix')
+    file_set = new_file_set
+
+    # NOTE: this is an integration point. Calls to
+    # PreservationEventLogger.log_preservation_event could be made from anywhere, but notably:
+    #   - a controller action that is triggered by end-user interaction
+    #   - a controller action that is triggered by an external request to an API endpoint
+    #   - an ingestion script, that is reading from a SIP (i.e. events that happened in the past)
+    PreservationEventLogger.log_preservation_event(file_set: file_set, premis_event_type: 'cap')
+    PreservationEventLogger.log_preservation_event(file_set: file_set, premis_event_type: 'fix')
   end
 end

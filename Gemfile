@@ -56,4 +56,5 @@ gem 'devise-guests', '~> 0.5'
 group :development, :test do
   gem 'fcrepo_wrapper'
   gem 'rspec-rails'
+  gem 'pry-rails', '~> 0.3.4'
 end

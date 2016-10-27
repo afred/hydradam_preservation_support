@@ -30,6 +30,3 @@ class Demo
     PreservationEventLogger.log_preservation_event(file_set: new_file_set, premis_event_type: 'fix')
   end
 end
-
-Demo.clean_slate!
-# Demo.run!

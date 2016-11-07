@@ -29,5 +29,5 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :preservation_events, only: 'index'
+  resources :preservation_events, only: [:index, :show]
 end

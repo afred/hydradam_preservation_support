@@ -57,4 +57,5 @@ group :development, :test do
   gem 'fcrepo_wrapper'
   gem 'rspec-rails'
   gem 'pry-rails', '~> 0.3.4'
+  gem 'pry-nav'
 end

@@ -1,4 +1,5 @@
 class PreservationEventsController < ApplicationController
+  include BlacklightRangeLimit::ControllerOverride
   include Hydra::Catalog
 
   # Override rails path for the views by appending 'catalog' as a

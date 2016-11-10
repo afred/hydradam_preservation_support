@@ -7,8 +7,6 @@ Rails.application.routes.draw do
 
   resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable
-    concerns :range_searchable
-
   end
 
   devise_for :users
@@ -32,5 +30,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :preservation_events, only: [:index, :show]
+  resources :preservation_events, only: [:index, :show] do
+    concerns :range_searchable
+  end
 end

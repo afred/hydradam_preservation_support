@@ -1,6 +1,4 @@
 class CatalogController < ApplicationController
-
-  include BlacklightRangeLimit::ControllerOverride
   include CurationConcerns::CatalogController
   configure_blacklight do |config|
     # config.search_builder_class = ::SearchBuilder

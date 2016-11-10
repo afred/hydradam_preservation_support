@@ -10,5 +10,10 @@ class PreservationEventsController < ApplicationController
 
  configure_blacklight do |config|
     config.search_builder_class = PreservationEventsSearchBuilder
+
+    config.index.document_presenter_class = PreservationEventPresenter
+
+    # TODO: Do not rely on dynamic suffixes here. Use Solrizer?
+    config.index.title_field = :premis_event_type_tesim
   end
 end

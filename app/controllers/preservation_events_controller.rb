@@ -15,5 +15,8 @@ class PreservationEventsController < ApplicationController
 
     # TODO: Do not rely on dynamic suffixes here. Use Solrizer?
     config.index.title_field = :premis_event_type_tesim
+    config.add_index_field :premis_event_related_object_tesim
+    config.add_index_field :system_create_dtsi
+    config.add_index_field :premis_agent_tesim
   end
 end

@@ -34,7 +34,7 @@ class Demo
     #   - a controller action that is triggered by end-user interaction
     #   - a controller action that is triggered by an external request to an API endpoint
     #   - an ingestion script, that is reading from a SIP (i.e. events that happened in the past)
-    PreservationEventLogger.log_preservation_event(file_set: file_set, premis_event_type: 'cap')
-    PreservationEventLogger.log_preservation_event(file_set: file_set, premis_event_type: 'fix')
+    PreservationEventLogger.log_preservation_event(file_set: file_set, premis_event_type: 'cap', premis_agent: 'mailto:andrew_myers@wgbh.org')
+    PreservationEventLogger.log_preservation_event(file_set: file_set, premis_event_type: 'fix', premis_agent: 'mailto:jlhardes@iu.edu')
   end
 end

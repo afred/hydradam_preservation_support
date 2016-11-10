@@ -10,6 +10,11 @@ class PreservationEventIndexer < ActiveFedora::IndexingService
                          'premis_event_related_object',
                          object.premis_event_related_object.first.id,
                          :stored_searchable)
+
+      Solrizer.set_field(solr_doc,
+                         'premis_agent',
+                         object.premis_agent.first.id,
+                         :stored_searchable)
     end
   end
 end

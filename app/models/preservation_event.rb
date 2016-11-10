@@ -5,6 +5,7 @@ class PreservationEvent < ActiveFedora::Base
   type ::RDF::Vocab::PREMIS.Event
   property :premis_event_type, predicate: ::RDF::Vocab::PREMIS.hasEventType
   property :premis_event_related_object, predicate: ::RDF::Vocab::PREMIS.hasEventRelatedObject
+  property :premis_agent, predicate: ::RDF::Vocab::PREMIS.hasAgent
 
   def self.indexer
     ::PreservationEventIndexer

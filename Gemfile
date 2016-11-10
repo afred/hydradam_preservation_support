@@ -59,3 +59,5 @@ group :development, :test do
   gem 'pry-rails', '~> 0.3.4'
   gem 'pry-nav'
 end
+
+gem 'blacklight_range_limit', github: 'projectblacklight/blacklight_range_limit', branch: 'master'

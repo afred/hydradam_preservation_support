@@ -15,6 +15,8 @@ class PreservationEventIndexer < ActiveFedora::IndexingService
                          'premis_agent',
                          object.premis_agent.first.id,
                          :stored_searchable)
+
+      solr_doc[Solrizer.solr_name(:system_create_facetable, Solrizer::Descriptor.new(:long, :stored, :indexed))] = Date.parse(solr_doc['system_create_dtsi']).strftime('%Y%m%d').to_i
     end
   end
 end

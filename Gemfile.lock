@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/projectblacklight/blacklight_range_limit.git
+  revision: c371b1a10c52207d7844ed7b7fa03fd96ed91484
+  branch: master
+  specs:
+    blacklight_range_limit (6.0.0)
+      blacklight (~> 6.0)
+      jquery-rails
+      rails (>= 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -568,6 +578,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  blacklight_range_limit!
   byebug
   coffee-rails (~> 4.1.0)
   curation_concerns
